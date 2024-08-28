@@ -31,12 +31,12 @@ const ListItems = ({ filteredItems, query }) => {
               </li>
             ))
           : isQueryValid && (
-              <li className="py-2 text-center space-y-4">
-                <p className="text-lg text-neutral-300">
+              <li className="mt-10 py-2 text-center space-y-4">
+                <p className="text-lg text-neutral-600">
                   Try a diffrent keyword
                 </p>
-                <p className="text-neutral-400">
-                  Cannot find any matches for your search term.
+                <p className="text-neutral-600 font-semibold">
+                  No matches found for your search term.
                 </p>
               </li>
             )}
