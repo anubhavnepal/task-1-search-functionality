@@ -1,6 +1,8 @@
 import React from "react";
+import HighlightQuery from "./HighlightQuery";
 
 const Cards = ({
+  query,
   courseTitle,
   courseDegree,
   courseDuration,
@@ -10,7 +12,7 @@ const Cards = ({
   return (
     <div className="bg-white m-auto px-4 py-5 space hover:bg-salomie hover:cursor-pointer">
       <h2 className="text-violet-1000 underline underline-offset-4 font-bold sm:text-xl ">
-        {courseTitle}
+        <HighlightQuery text={courseTitle} query={query} />
       </h2>
       <div className="course-description mt-2 mb-4 divide-x-2 divide-gray-300 flex items-center gap-x-4">
         <div className="course-type flex items-center gap-x-2 px-2">
@@ -27,7 +29,9 @@ const Cards = ({
         </div>
       </div>
       <div className="course-detailed-info">
-        <p className="text-neutral-800">{courseDescription}</p>
+        <p className="text-neutral-800">
+          <HighlightQuery text={courseDescription} query={query} />
+        </p>
       </div>
     </div>
   );

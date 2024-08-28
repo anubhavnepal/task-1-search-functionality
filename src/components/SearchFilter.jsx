@@ -9,8 +9,10 @@ const SearchFilter = ({ className }) => {
   const handleChange = (event) => setQuery(event.target.value);
 
   const lowercaseQuery = query.trim().toLowerCase();
-  const filteredItems = courseItems.filter((item) =>
-    item.title.toLowerCase().includes(lowercaseQuery)
+  const filteredItems = courseItems.filter(
+    (item) =>
+      item.title.toLowerCase().includes(lowercaseQuery) ||
+      item.description.toLowerCase().includes(lowercaseQuery)
   );
   return (
     <>

@@ -5,8 +5,8 @@ const ListItems = ({ filteredItems, query }) => {
   const isQueryValid = query.trim().length > 0;
 
   return (
-    <div className="px-8">
-      <div className="mt-6 text-xl font-semibold tracking-wide max-sm:text-center">
+    <div className="px-8 mt-10">
+      <div className="text-xl font-semibold tracking-wide max-sm:text-center">
         {!isQueryValid ? (
           <span className="">Suggested search</span>
         ) : (
@@ -19,11 +19,9 @@ const ListItems = ({ filteredItems, query }) => {
       <ul className="mt-4 divide-y ">
         {filteredItems.length
           ? filteredItems.map((item, idx) => (
-              <li
-                key={idx}
-                className="my-5"
-              >
+              <li key={idx} className="my-5">
                 <Cards
+                  query={query}
                   courseTitle={item.title}
                   courseDegree={item.degree}
                   courseDuration={item.duration}

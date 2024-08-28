@@ -10,6 +10,7 @@ export default {
         'whisper': '#EEEEEE',
         'violet-1000': '#1E1248',
         'salomie': '#FED76F',
+        'highlight-color': '#FF6F61'
       }
     },
   },
