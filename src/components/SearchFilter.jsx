@@ -23,8 +23,8 @@ const SearchFilter = ({ className }) => {
           onInputChange={handleChange}
           inputClassName="w-full px-5 py-3 sm:py-4 bg-whisper text:md sm:text-xl tracking-wide"
           buttonClassName="bg-violet-1000 hover:bg-violet-950 px-4 sm:px-8 py-3 sm:py-5 text-whisper sm:text-xl font-bold "
-          buttonText="SEARCH"
-          onButtonClick={() => {}}
+          buttonText="CLEAR"
+          onButtonClick={() => setQuery("")}
         />
       </div>
       <ListItems filteredItems={filteredItems} query={query} />
